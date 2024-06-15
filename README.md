@@ -12,21 +12,6 @@
 - [Contact](#contact)
 
 
-# Data Structure Visualizer
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Demo](#demo)
-- [Installation](#installation)
-- [Languages and Tools](#languages-and-tools)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-
-
 ## Overview
 
 Welcome to the **Data Structure Visualizer** project! This project provides an interactive platform to visualize various data structures, including arrays, linked lists, stacks, and queues. Through visual representations, users can understand the operations and functionalities of these data structures.
@@ -39,8 +24,8 @@ Welcome to the **Data Structure Visualizer** project! This project provides an i
     - Insertion
     - Deletion
   - Linked List:
-    - Insertion (at beginning)
-    - Deletion (at beginning)
+    - Insertion (at the beginning)
+    - Deletion (at the beginning)
   - Stack:
     - Push (Add element)
     - Pop (Remove element)
@@ -86,7 +71,7 @@ run with live server
 
 ## Contribution
 
--We welcome contributions to this project! To contribute:
+We welcome contributions to this project! To contribute:
 
 1) 🍴 Fork the repository.
 2) 🌿 Create a new branch: git checkout -b feature/your-newBranch-name.
@@ -96,7 +81,7 @@ run with live server
 
 ## License
 
--This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## Contact
 
