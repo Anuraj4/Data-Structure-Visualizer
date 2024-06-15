@@ -56,3 +56,13 @@ body {
     justify-content: center;
     align-items: center;
 }
+/* styles.css */
+body {
+    background-color: #e0dbdb;
+}
+
+.bar {
+    width: 20px;
+    margin: 0 1px;
+    background-color: teal;
+}

@@ -4,19 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Structure Visualizer</title>
+    <title>Data Structure and Sorting Visualizer</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container mt-5">
-        <h1 class="text-center mb-4 text-dark">Data Structure Visualizer</h1>
+        <h1 class="text-center mb-4 text-dark">Data Structure and Sorting Visualizer</h1>
         <div class="controls text-center mb-4">
             <input type="number" id="valueInput" class="form-control d-inline-block w-auto mr-2 mb-2"
                 placeholder="Enter value">
             <aside>
-
                 <button onclick="addArray()" class="btn btn-primary mb-2">Add to Array</button>
                 <button onclick="removeArray()" class="btn btn-danger mb-2">Remove from Array</button>
                 <button onclick="enqueue()" class="btn btn-success mb-2">Enqueue</button>
@@ -33,7 +32,15 @@
             <div id="stack" class="mb-4 text-dark"></div>
             <div id="linkedlist" class="mb-4 text-dark"></div>
         </div>
+
+        <!-- Sorting Visualizer Section -->
+        <div class="container text-center">
+            <h2 class="my-4 text-dark">Sorting Visualizer</h2>
+            <div id="array-container" class="d-flex align-items-end justify-content-center"></div>
+            <button class="btn btn-primary mt-4" onclick="bubbleSort()">Bubble Sort</button>
+        </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

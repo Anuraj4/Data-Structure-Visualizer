@@ -174,3 +174,4 @@ function deleteLinkedList() {
         document.getElementById('valueInput').value = '';
     }
 }
+
