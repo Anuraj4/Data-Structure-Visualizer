@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <div class="container mt-5">
-        <h1 class="text-center mb-4 text-dark">Data Structure and Sorting Visualizer</h1>
+    <div class="container">
+        <h1 class="text-center mb-4 mt-3 text-dark">Data Structure and Sorting Visualizer</h1>
         <div class="controls text-center mb-4">
             <input type="number" id="valueInput" class="form-control d-inline-block w-auto mr-2 mb-2"
                 placeholder="Enter value">
@@ -24,6 +24,8 @@
                 <button onclick="popStack()" class="btn btn-secondary mb-2">Pop from Stack</button>
                 <button onclick="insertLinkedList()" class="btn btn-dark mb-2">Insert LinkedList</button>
                 <button onclick="deleteLinkedList()" class="btn btn-light mb-2">Delete LinkedList</button>
+                <button onclick="insertBinaryTree()" class="btn btn-primary mb-2">Insert Binary Tree</button>
+                <button onclick="deleteBinaryTree()" class="btn btn-danger mb-2">Delete Binary Tree</button>
             </aside>
         </div>
         <div id="visualization" class="text-center">
@@ -34,11 +36,11 @@
         </div>
 
         <!-- Sorting Visualizer Section -->
-        <div class="container text-center">
+        <!-- <div class="container text-center">
             <h2 class="my-4 text-dark">Sorting Visualizer</h2>
             <div id="array-container" class="d-flex align-items-end justify-content-center"></div>
             <button class="btn btn-primary mt-4" onclick="bubbleSort()">Bubble Sort</button>
-        </div>
+        </div> -->
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

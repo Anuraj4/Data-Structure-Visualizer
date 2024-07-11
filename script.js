@@ -175,3 +175,119 @@ function deleteLinkedList() {
     }
 }
 
+class TreeNode {
+    constructor(value) {
+        this.value = value;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+class BinaryTree {
+    constructor() {
+        this.root = null;
+    }
+
+    insert(value) {
+        const newNode = new TreeNode(value);
+        if (!this.root) {
+            this.root = newNode;
+        } else {
+            this.insertNode(this.root, newNode);
+        }
+        this.visualize();
+    }
+
+    insertNode(node, newNode) {
+        if (newNode.value < node.value) {
+            if (!node.left) {
+                node.left = newNode;
+            } else {
+                this.insertNode(node.left, newNode);
+            }
+        } else {
+            if (!node.right) {
+                node.right = newNode;
+            } else {
+                this.insertNode(node.right, newNode);
+            }
+        }
+    }
+
+    delete(value) {
+        this.root = this.deleteNode(this.root, value);
+        this.visualize();
+    }
+
+    deleteNode(node, value) {
+        if (!node) return null;
+
+        if (value < node.value) {
+            node.left = this.deleteNode(node.left, value);
+            return node;
+        } else if (value > node.value) {
+            node.right = this.deleteNode(node.right, value);
+            return node;
+        } else {
+            if (!node.left && !node.right) return null;
+            if (!node.left) return node.right;
+            if (!node.right) return node.left;
+
+            const tempNode = this.getMin(node.right);
+            node.value = tempNode.value;
+            node.right = this.deleteNode(node.right, tempNode.value);
+            return node;
+        }
+    }
+
+    getMin(node) {
+        while (node.left) {
+            node = node.left;
+        }
+        return node;
+    }
+
+    visualize() {
+        const container = document.getElementById('binarytree');
+        container.innerHTML = '';
+        if (this.root) {
+            this.visualizeNode(container, this.root, 0, null, '');
+        }
+    }
+
+    visualizeNode(container, node, depth, parentNode, direction) {
+        const div = document.createElement('div');
+        div.className = 'node';
+        div.innerText = node.value;
+        container.appendChild(div);
+
+        if (parentNode) {
+            const connector = document.createElement('div');
+            connector.className = `connector ${direction}`;
+            parentNode.appendChild(connector);
+        }
+
+        if (node.left) {
+            this.visualizeNode(container, node.left, depth + 1, div, 'left');
+        }
+        if (node.right) {
+            this.visualizeNode(container, node.right, depth + 1, div, 'right');
+        }
+    }
+}
+
+const binaryTree = new BinaryTree();
+
+function insertBinaryTree() {
+    const value = parseInt(document.getElementById('valueInput').value);
+    if (!isNaN(value)) {
+        binaryTree.insert(value);
+    }
+}
+
+function deleteBinaryTree() {
+    const value = parseInt(document.getElementById('valueInput').value);
+    if (!isNaN(value)) {
+        binaryTree.delete(value);
+    }
+}

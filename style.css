@@ -66,3 +66,41 @@ body {
     margin: 0 1px;
     background-color: teal;
 }
+#binarytree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.valueInput{
+    padding: 20px;
+    color: black;
+    border: 2px solid black;
+}
+
+.node {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.connector {
+    width: 2px;
+    height: 20px;
+    background-color: black;
+    position: absolute;
+}
+
+.left {
+    transform: rotate(45deg);
+    transform-origin: top left;
+}
+
+.right {
+    transform: rotate(-45deg);
+    transform-origin: top right;
+}
