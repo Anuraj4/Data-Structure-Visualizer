@@ -1,6 +1,6 @@
 # Data-Structure-Visualizer
 
-![image](https://github.com/Anuraj4/React-Weather-App/blob/main/Screenshot%202024-05-26%20122857.png)
+![image](https://github.com/Anuraj4/Data-Structure-Visualizer/blob/main/Screenshot%202024-07-11%20215025.png)
 
 ## Table of Contents
 
