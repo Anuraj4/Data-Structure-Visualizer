@@ -41,7 +41,7 @@ Welcome to the **Data Structure Visualizer** project! This project provides an i
 
 ## Demo
 
-You can check out the live demo of the application [here](http://your-demo-url.com).
+You can check out the live demo of the application [here](https://datavizpro.netlify.app/).
 
 ## Installation
 
