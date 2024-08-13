@@ -1,5 +1,7 @@
 # Data-Structure-Visualizer
 
+![image](https://github.com/Anuraj4/Data-Structure-Visualizer/blob/main/Screenshot%202024-07-11%20215025.png)
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -39,7 +41,7 @@ Welcome to the **Data Structure Visualizer** project! This project provides an i
 
 ## Demo
 
-You can check out the live demo of the application [here](http://your-demo-url.com).
+You can check out the live demo of the application [here](https://datavizpro.netlify.app/).
 
 ## Installation
 
