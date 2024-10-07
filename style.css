@@ -6,7 +6,6 @@ body {
     overflow: hidden;
     background-color: black;
 }
-
 .container {
     display: flex;
     flex-direction: column;
@@ -18,8 +17,6 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
-
-
 .controls {
     display: flex;
     flex-wrap: wrap;
@@ -87,19 +84,16 @@ body {
     background-color: #f0f0f0;
     text-align: center;
 }
-
 .connector {
     width: 2px;
     height: 20px;
     background-color: black;
     position: absolute;
 }
-
 .left {
     transform: rotate(45deg);
     transform-origin: top left;
 }
-
 .right {
     transform: rotate(-45deg);
     transform-origin: top right;
