@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <h1 class="text-center mb-4 mt-3 text-dark">Data Structure and Sorting Visualizer</h1>
@@ -16,7 +17,7 @@
                 placeholder="Enter value">
             <aside>
                 <button onclick="addArray()" class="btn btn-primary mb-2">Add to Array</button>
-                <button  onclick="removeArray()" class="btn btn-danger mb-2">Remove from Array</button>
+                <button onclick="removeArray()" class="btn btn-danger mb-2">Remove from Array</button>
                 <button onclick="enqueue()" class="btn btn-success mb-2">Enqueue</button>
                 <button onclick="dequeue()" class="btn btn-warning mb-2">Dequeue</button>
                 <button onclick="pushStack()" class="btn btn-info mb-2">Push to Stack</button>
@@ -26,12 +27,29 @@
             </aside>
         </div>
         <div id="visualization" class="text-center">
-            <div  id="array" class="mb-4 text-dark"></div>
+            <div id="array" class="mb-4 text-dark"></div>
             <div id="queue" class="mb-4 text-dark"></div>
             <div id="stack" class="mb-4 text-dark"></div>
             <div id="linkedlist" class="mb-4 text-dark"></div>
         </div>
-       
+        <!-- Chatbot container -->
+        <div class="chatbot-container">
+            <div class="chatbox">
+                <div class="chatbox-header">
+                    Chatbot
+                    <button id="chatbox-close" onclick="toggleChatbox()">X</button>
+                </div>
+                <div class="chatbox-content" id="chatbox-content">
+                    <!-- Chat messages will be appended here -->
+                </div>
+                <div class="chatbox-input">
+                    <input type="text" id="user-input" placeholder="Type a message...">
+                    <div class="button"></div>
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+            <button id="chatbox-toggle" onclick="toggleChatbox()">Chat</button>
+        </div>
         <!-- <div class="container text-center">
             <h2 class="my-4 text-dark">Sorting Visualizer</h2>
             <div id="array-container" class="d-flex align-items-end justify-content-center"></div>
@@ -43,4 +61,5 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

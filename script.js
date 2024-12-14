@@ -291,3 +291,72 @@ function deleteBinaryTree() {
         binaryTree.delete(value);
     }
 }
+// Chatbot Functions
+function toggleChatbox() {
+    const chatbox = document.querySelector('.chatbox');
+    const chatboxToggle = document.querySelector('#chatbox-toggle');
+    if (chatbox && chatboxToggle) {
+        if (chatbox.style.display === 'none' || chatbox.style.display === '') {
+            chatbox.style.display = 'block';
+            chatboxToggle.style.display = 'none';
+        } else {
+            chatbox.style.display = 'none';
+            chatboxToggle.style.display = 'block';
+        }
+    }
+}
+
+function sendMessage() {
+    const userInput = document.querySelector('#user-input');
+    const message = userInput ? userInput.value.trim() : '';
+    if (message) {
+        appendMessage('User', message);
+        if (userInput) userInput.value = '';
+        getBotResponse(message);
+    }
+}
+function appendMessage(sender, message) {
+    const chatboxContent = document.querySelector('#chatbox-content');
+    if (chatboxContent) {
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('message', sender.toLowerCase());
+        messageElement.innerText = `${sender}: ${message}`;
+        chatboxContent.appendChild(messageElement);
+        chatboxContent.scrollTop = chatboxContent.scrollHeight;
+    }
+}
+
+function getBotResponse(message) {
+    // Normalize the message for easier matching
+    const userMessage = message.toLowerCase().trim();
+
+    // Define responses for data structure-related queries
+    let response;
+
+    if (userMessage.includes('hello') || userMessage.includes('hii')) {
+        response = 'Hello! Welcome to the Data Structure Visualizer. How can I assist you today?';
+    } else if (userMessage.includes('array')) {
+        response = 'Arrays are used to store a collection of data elements. You can perform operations like adding, deleting, or searching for elements. Would you like to learn more or see a visualization?';
+    } else if (userMessage.includes('linked list')) {
+        response = 'A linked list is a dynamic data structure that consists of nodes. You can add, delete, or traverse nodes. Would you like help with a specific operation or concept?';
+    } else if (userMessage.includes('stack')) {
+        response = 'Stacks follow the LIFO (Last In, First Out) principle. Common operations include push, pop, and peek. Let me know if you want a demonstration!';
+    } else if (userMessage.includes('queue')) {
+        response = 'Queues follow the FIFO (First In, First Out) principle. Operations like enqueue and dequeue are supported. Need help visualizing it?';
+    } else if (userMessage.includes('sorting')) {
+        response = 'Sorting algorithms arrange elements in a specific order. Would you like to see how Bubble Sort, Merge Sort, or Quick Sort works?';
+    } else if (userMessage.includes('searching')) {
+        response = 'Searching algorithms help you find elements in a data structure. Binary Search and Linear Search are common options. Shall I show you an example?';
+    } else if (userMessage.includes('portfolio')) {
+        response = 'You can find my portfolio projects on the main page. Explore more to see interesting implementations!';
+    } else if (userMessage.includes('contact')) {
+        response = 'You can contact me via email at anurajvenkatpurwar@gmail.com.';
+    } else if (userMessage.includes('help')) {
+        response = 'Sure! I can assist with topics like Arrays, Linked Lists, Stacks, Queues, Sorting, and Searching. Please ask me a specific question!';
+    } else {
+        response = 'Sorry, I didn\'t understand that. Could you rephrase or ask about a specific data structure or operation?';
+    }
+
+    // Append the bot's response to the chat
+    appendMessage('Bot', response);
+}

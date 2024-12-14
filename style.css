@@ -6,6 +6,7 @@ body {
     overflow: hidden;
     background-color: black;
 }
+
 .container {
     display: flex;
     flex-direction: column;
@@ -17,6 +18,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
+
 .controls {
     display: flex;
     flex-wrap: wrap;
@@ -50,12 +52,16 @@ body {
 
 }
 
-#array, #queue, #stack, #linkedlist {
+#array,
+#queue,
+#stack,
+#linkedlist {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
+
 /* styles.css */
 body {
     background-color: #e0dbdb;
@@ -66,13 +72,15 @@ body {
     margin: 0 1px;
     background-color: teal;
 }
+
 #binarytree {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.valueInput{
+
+.valueInput {
     padding: 20px;
     color: black;
     border: 2px solid black;
@@ -87,17 +95,123 @@ body {
     background-color: #f0f0f0;
     text-align: center;
 }
+
 .connector {
     width: 2px;
     height: 20px;
     background-color: black;
     position: absolute;
 }
+
 .left {
     transform: rotate(45deg);
     transform-origin: top left;
 }
+
 .right {
     transform: rotate(-45deg);
     transform-origin: top right;
+}
+
+.chatbot-container {
+    position: fixed;
+    bottom: 100px;
+    right: 15px;
+}
+
+.chatbox {
+    display: none;
+    width: 300px;
+    height: 400px;
+    background-color: #ddf7d5;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+
+
+.chatbox-header {
+    background-color: #c0e0ff;
+    /* Dark blue */
+    color: var(--third-color);
+    font-weight: 500;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+#chatbox-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.chatbox-content {
+    padding: 10px;
+    height: 300px;
+    color: var(--third-color);
+    overflow-y: auto;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+#chatbox-toggle {
+    width: 52px;
+    height: 54px;
+    background-color: #2b5226;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    line-height: 24px;
+    /* Vertically center the text */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#chatbox-toggle:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the chatbot input box and send button */
+.chatbox-input {
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid #ccc;
+    background-color: #f8f8f8;
+}
+
+#user-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#user-input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.chatbox-input button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.chatbox-input button:hover {
+    background-color: #0056b3;
 }
